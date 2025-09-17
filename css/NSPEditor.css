@@ -35,8 +35,11 @@ html {
 }
 
 .Nassi-Shneiderman>.statements {
-	height: 85%;
+	min-height: 85%;
 	min-width: fit-content;
+}
+.Nassi-Shneiderman>.post-statements {
+	height: 1rem;
 }
 
 /*::-webkit-scrollbar {
