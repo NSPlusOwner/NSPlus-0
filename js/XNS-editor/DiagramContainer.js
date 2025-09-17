@@ -86,7 +86,9 @@ function DiagramContainer() {
 	// }
 	this.insertStatementInTarget = function (target, statement) {
 		var parent = target.parentNode == this.container ? target : target.parentNode;
-		if (parent.lastChild == target || target.parentNode == this.container) {
+		if (parent.lastChild == null || parent.lastChild == target || target.parentNode == this.container) {
+			if (parent.lastChild == null)
+				parent.appendChild(newEmptyBlock());
 			parent.appendChild(statement);
 			parent.appendChild(empty);
 		} else {
